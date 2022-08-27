@@ -2,10 +2,10 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 
 module.exports = {
     config: {
-        name: "invite",
+        name: "botinfo",
         aliases: [],
         kategori: "diger",
-        description: "Botun davet linki .",
+        description: "Botun info komutu.",
     },
     run: async (client, message, args) => {
         const embed = new EmbedBuilder()

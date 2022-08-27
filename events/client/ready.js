@@ -1,6 +1,5 @@
 const figlet = require('figlet');
 const chalk = require('chalk');
-// github.com/EmirhanSarac/discord-v14-muzik-botu - discord.gg/codare - youtube.com/EmirhanSarac
 module.exports = async (client) => {
   figlet(client.user.tag, function(err, data) {
     if (err) {
@@ -16,15 +15,12 @@ module.exports = async (client) => {
   let channels = client.channels.cache.size;
 
   const activities = [
-      `${client.prefix}`,
-      `${client.prefix}`,
-      `${client.prefix}`,
+      `*yardım`,
+      `Kesintisiz Music`,
+      `Hizmetinizde`,
   ]
 
   setInterval(() => {
       client.user.setActivity(`${activities[Math.floor(Math.random() * activities.length)]}`, { type: 'WATCHING' });
   }, 15000)
 }
-
-
-// github.com/EmirhanSarac/discord-v14-muzik-botu - discord.gg/codare - youtube.com/EmirhanSarac

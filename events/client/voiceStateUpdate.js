@@ -24,7 +24,6 @@ module.exports = async (client, oldState, newState) => {
         return
     }
 
-    // github.com/EmirhanSarac/discord-v14-muzik-botu - discord.gg/codare - youtube.com/EmirhanSarac
     if (oldState.channelId && !newState.channelId) {
         return
     }

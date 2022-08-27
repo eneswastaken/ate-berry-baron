@@ -39,7 +39,7 @@ module.exports = {
             if(!command) return message.channel.send({ embeds: [embed.setTitle("Geçersiz Komut.").setDescription(`Komut listesini görmek için \`${client.prefix}help\` yazınız!`)] })
             command = command.config
 
-            embed.setDescription(stripIndents`Prefix: \`${client.prefix}\`\n
+            embed.setDescription(stripIndents`**Prefix;** *\n
             **Komut:** ${command.name.slice(0, 1).toUpperCase() + command.name.slice(1)}
             **Açıklama:** ${command.description || "Açıklama Bulunamadı."}
             **Kullanımı:** ${command.usage ? `\`${client.prefix}${command.name} ${command.usage}\`` : "Bulunamadı"}
@@ -49,5 +49,3 @@ module.exports = {
         }
     }
 }
-
-// github.com/EmirhanSarac/discord-v14-muzik-botu - discord.gg/codare - youtube.com/EmirhanSarac

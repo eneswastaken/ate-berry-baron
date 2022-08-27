@@ -29,6 +29,3 @@ module.exports = {
         await client.distube.play(message.member.voice.channel, string, options);
     }
 }
-
-
-// github.com/EmirhanSarac/discord-v14-muzik-botu - discord.gg/codare - youtube.com/EmirhanSarac
