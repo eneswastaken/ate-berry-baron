@@ -11,7 +11,7 @@ module.exports = {
     run: async (client, message) => {
         const msg = await message.channel.send("Yükleniyor...");
         const embed = new EmbedBuilder()
-            .setColor('#FD0A0A')
+            .setColor('#000001')
             .setAuthor({ name: `Filtreler`, iconURL: message.guild.iconURL({ dynamic: true })})
             .setDescription(`\`${client.prefix}3d\`\n\`${client.prefix}bassboost\`\n\`${client.prefix}echo\`\n\`${client.prefix}speedup\`\n\`${client.prefix}slowed\`\n\`${client.prefix}reverse\`\n\`${client.prefix}surround\``)
             .setThumbnail(client.user.displayAvatarURL({ dynamic: true, size: 2048 }))
