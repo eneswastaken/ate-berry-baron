@@ -9,17 +9,17 @@ module.exports = {
         aliases: []
     },
     run: async (client, message) => {
-        const msg = await message.channel.send("Yükleniyor lütfen bekleyin!")
+        const msg = await message.channel.send("> **Yükleniyor lütfen bekleyin <a:basarl:1008732951288234084>!**")
         
         const queue = client.distube.getQueue(message);
-        if (!queue) msg.edit(`Şu anda sırada hiç bir şey yok!`)
+        if (!queue) msg.edit(`> **Şu anda sırada hiç bir şey yok! <a:yanlss:1008733112592769024>**`)
         const { channel } = message.member.voice;
-        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("Aynı ses kanalında olmanız gerekmektedir!")
+        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("> **Aynı ses kanalında olmanız gerekmektedir! <a:yanlss:1008733112592769024>**")
 
         queue.filters.add("3d");
 
         const embed = new EmbedBuilder()
-            .setAuthor({ text: '3D Aktifleştirildi', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
+            .setAuthor({ text: '3D Aktifleştirildi <a:basarl:1008732951288234084>', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
             .setColor('#000001');
 
         await delay(5000);
