@@ -137,14 +137,14 @@ function disspace(nowQueue, nowTrack) {
       new ButtonBuilder()
         .setCustomId("pause")
         .setLabel(`Duraklat`)
-        .setEmoji("⏯")
+        .setEmoji("<a:niade_squiddance:1008294254147293248>")
         .setStyle(ButtonStyle.Success)
     )
     .addComponents(
       new ButtonBuilder()
         .setCustomId("previous")
         .setLabel(`Önceki Şarkı`)
-        .setEmoji("⬅")
+        .setEmoji("<:arrow_left:1013165844236349541>")
         .setStyle(ButtonStyle.Primary)
     )
     .addComponents(
@@ -158,14 +158,14 @@ function disspace(nowQueue, nowTrack) {
       new ButtonBuilder()
         .setCustomId("skip")
         .setLabel(`Şarkıyı Geç`)
-        .setEmoji("➡")
+        .setEmoji("<:arrow_right:1013165877581062144>")
         .setStyle(ButtonStyle.Primary)
     )
     .addComponents(
       new ButtonBuilder()
         .setCustomId("loop")
         .setLabel(`Loop`)
-        .setEmoji("🔄")
+        .setEmoji("<:recaptcha:1013165923395444777>")
         .setStyle(ButtonStyle.Success)
     )
   return {
