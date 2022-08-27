@@ -14,11 +14,7 @@ module.exports = async (client) => {
   let users = client.users.cache.size;
   let channels = client.channels.cache.size;
 
-  const activities = [
-      `*yardım`,
-      `Kesintisiz Music`,
-      `Hizmetinizde`,
-  ]
+  const activities = []
 
   setInterval(() => {
       client.user.setActivity(`${activities[Math.floor(Math.random() * activities.length)]}`, { type: 'WATCHING' });
