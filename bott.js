@@ -52,7 +52,7 @@ class MainClient extends Client {
 
     }
     connect() {
-        return super.login(this.token);
+        return super.login(process.env.token);
     };
 };
 module.exports = MainClient;
