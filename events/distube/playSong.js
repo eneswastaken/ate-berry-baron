@@ -25,14 +25,14 @@ module.exports = async (client, queue, track) => {
         await client.distube.resume(message.guild.id);
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription(`\`⏯\` | **Şarkı:** \`Devam Ettiriliyor\``);
+          .setDescription(`| **Şarkı:** \`Devam Ettiriliyor\``);
 
         message.reply({ embeds: [embed], ephemeral: true });
       } else {
         await client.distube.pause(message.guild.id);
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription(`\`⏯\` | **Şarkı:** \`Duraklatıldı\``);
+          .setDescription(`| **Şarkı:** \`Duraklatıldı\``);
 
         message.reply({ embeds: [embed], ephemeral: true });
       }
@@ -43,7 +43,7 @@ module.exports = async (client, queue, track) => {
       if (queue.songs.length === 1 && queue.autoplay === false) {
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription("\`🚨\` | **Kuyrukta **`Şarkı`** bulunamadı!")
+          .setDescription("| **Kuyrukta **`Şarkı`** bulunamadı!")
 
         message.reply({ embeds: [embed], ephemeral: true });
       } else {
@@ -51,7 +51,7 @@ module.exports = async (client, queue, track) => {
           .then(song => {
             const embed = new EmbedBuilder()
               .setColor("#000001")
-              .setDescription("\`⏭\` | **Şarkı başarıyla geçildi!**")
+              .setDescription("| **Şarkı başarıyla geçildi!**")
 
             nowplay.edit({ components: [] });
             message.reply({ embeds: [embed], ephemeral: true });
@@ -65,7 +65,7 @@ module.exports = async (client, queue, track) => {
       await client.distube.stop(message.guild.id);
 
       const embed = new EmbedBuilder()
-        .setDescription(`\`🚫\` | **Şarkı:** | \`Durduruldu!\``)
+        .setDescription(`| **Şarkı:** | \`Kapatıldı!\``)
         .setColor('#000001');
 
       await nowplay.edit({ components: [] });
@@ -78,14 +78,14 @@ module.exports = async (client, queue, track) => {
         client.distube.setRepeatMode(message.guild.id, 1);
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription(`\`🔁\` | **Loop Başarıyla Aktif Edildi!**`)
+          .setDescription(`| **Loop Başarıyla Aktif Edildi!**`)
 
         message.reply({ embeds: [embed], ephemeral: true });
       } else {
         client.distube.setRepeatMode(message.guild.id, 0);
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription(`\`🔁\` | **Loop Devredışı!**`)
+          .setDescription(`| **Loop Devredışı!**`)
 
         message.reply({ embeds: [embed], ephemeral: true });
       }
@@ -96,14 +96,14 @@ module.exports = async (client, queue, track) => {
       if (queue.previousSongs.length == 0) {
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription("\`🚨\` | **Önceden çalınan şarkı bulunamadı!**")
+          .setDescription("| **Önceden çalınan şarkı bulunamadı!**")
 
         message.reply({ embeds: [embed], ephemeral: true });
       } else {
         await client.distube.previous(message)
         const embed = new EmbedBuilder()
           .setColor("#000001")
-          .setDescription("\`⏮\` | **Önceki çalınan şarkıya başarıyla geçilmiştir**")
+          .setDescription("| **Önceki çalınan şarkıya başarıyla geçilmiştir**")
 
         nowplay.edit({ components: [] });
         message.reply({ embeds: [embed], ephemeral: true });
@@ -119,7 +119,7 @@ module.exports = async (client, queue, track) => {
 
 function disspace(nowQueue, nowTrack) {
   const embeded = new EmbedBuilder()
-    .setAuthor({ name: `Şarkı Çalmaya Başladı...`, iconURL: 'https://cdn.discordapp.com/emojis/741605543046807626.gif' })
+    .setAuthor({ name: `Şarkı Çalmaya Başladı...`, iconURL: 'https://cdn.discordapp.com/emojis/1008294752397045802.gif?size=80&quality=lossless' })
     .setThumbnail(nowTrack.thumbnail)
     .setColor('#000001')
     .setDescription(`**[${nowTrack.name}](${nowTrack.url})**`)
@@ -151,7 +151,7 @@ function disspace(nowQueue, nowTrack) {
       new ButtonBuilder()
         .setCustomId("stop")
         .setLabel(`Durdur`)
-        .setEmoji("✖")
+        .setEmoji("<a:yanlss:1008733112592769024>")
         .setStyle(ButtonStyle.Danger)
     )
     .addComponents(

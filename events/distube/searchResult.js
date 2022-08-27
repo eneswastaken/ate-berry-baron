@@ -6,7 +6,7 @@ module.exports = async (client, message, result, query) => {
         .setColor("#000001")
         .setTitle(`Şarkı Seçimi`)
         .setDescription(`${result.map(song => `**(${++i}.) [${song.name}](${song.url})** - \`${song.formattedDuration}\``).join("\n")}`)
-        .setFooter({ text: `**30 Saniye İçinde Bir Şarkı Seçiniz!**` });
+        .setFooter({ text: `**30 Saniye İçinde Bir Şarkı Seçiniz! <a:basarl:1008732951288234084>**` });
 
     message.channel.send({ embeds: [embed] });
 }
