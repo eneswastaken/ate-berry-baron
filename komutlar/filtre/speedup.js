@@ -9,17 +9,17 @@ module.exports = {
         aliases: ["nc", "speedup"]
     },
     run: async (client, message) => {
-        const msg = await message.channel.send("Yükleniyor lütfen bekleyin!")
+        const msg = await message.channel.send("> **Yükleniyor lütfen bekleyin! <a:basarl:1008732951288234084>**")
         
         const queue = client.distube.getQueue(message);
-        if (!queue) msg.edit(`Şu anda sırada hiç bir şey yok!`)
+        if (!queue) msg.edit(`> **Şu anda sırada hiç bir şey yok! <a:basarl:1008732951288234084>**`)
         const { channel } = message.member.voice;
-        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("Aynı ses kanalında olmanız gerekmektedir!")
+        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("> **Aynı ses kanalında olmanız gerekmektedir! <a:basarl:1008732951288234084>**")
 
         queue.filters.add("nightcore")
 
         const embed = new EmbedBuilder()
-            .setAuthor({ name: 'Speedup Aktifleştirildi', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
+            .setAuthor({ name: 'Speedup Aktifleştirildi <a:basarl:1008732951288234084>', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
             .setColor('#000001');
 
         await delay(5000);

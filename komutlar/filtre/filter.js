@@ -9,12 +9,12 @@ module.exports = {
         aliases: []
     },
     run: async (client, message, args) => {
-        const msg = await message.channel.send("Yükleniyor lütfen bekleyin!")
+        const msg = await message.channel.send("> **Yükleniyor lütfen bekleyin! <a:basarl:1008732951288234084>**")
         
         const queue = client.distube.getQueue(message);
-        if (!queue) msg.edit(`Şu anda sırada hiçbir şey yok!`)
+        if (!queue) msg.edit(`> **Şu anda sırada hiç bir şey yok! <a:basarl:1008732951288234084>**`)
         const { channel } = message.member.voice;
-        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("Aynı ses kanalında olmanız gerekmektedir!")
+        if (!channel || message.member.voice.channel !== message.guild.members.me.voice.channel) return msg.edit("> **Aynı ses kanalında olmanız gerekmektedir! <a:basarl:1008732951288234084>**")
 
         const filter = args[0];
 
@@ -22,7 +22,7 @@ module.exports = {
         else if (Object.keys(client.distube.filters).includes(filter)) {
             if (queue.filters.has(filter)) queue.filters.remove(filter)
             else queue.filters.add(filter)
-        } else if (args[0]) msg.edit(`Filtre bulunamadı!`)
+        } else if (args[0]) msg.edit(`Filtre bulunamadı! <a:basarl:1008732951288234084>`)
 
         const embed = new EmbedBuilder()
             .setAuthor({ name: `Şuanki Filtre <a:basarl:1008732951288234084>`, iconURL: `https://cdn.discordapp.com/emojis/741605543046807626.gif`})

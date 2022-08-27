@@ -9,7 +9,7 @@ module.exports = async (client, message) => {
     if (message.content.match(mention)) {
       const embed = new EmbedBuilder()
         .setColor("#000001")
-        .setDescription(`**Ön Ekim: \`${PREFIX}\`**`);
+        .setDescription(`**Prefix:** \`${PREFIX}\``);
       message.channel.send({ embeds: [embed] })
     };
     const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

@@ -9,7 +9,7 @@ module.exports = {
         aliases: []
     },
     run: async (client, message) => {
-        const msg = await message.channel.send("> **Yükleniyor lütfen bekleyin <a:basarl:1008732951288234084>!**")
+        const msg = await message.channel.send("> **Yükleniyor lütfen bekleyin! <a:basarl:1008732951288234084>**")
         
         const queue = client.distube.getQueue(message);
         if (!queue) msg.edit(`> **Şu anda sırada hiç bir şey yok! <a:yanlss:1008733112592769024>**`)

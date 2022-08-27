@@ -20,8 +20,8 @@ module.exports = {
         if(!args[0]) {
             const categories = readdirSync("./komutlar/")
 
-            embed.setDescription(`Ön-Ekim: **${client.prefix}**`)
-            embed.setFooter({ text: `© ${message.guild.members.me.displayName} | Toplam Komut: ${client.commands.size}`, iconURL: client.user.displayAvatarURL({ dynamic: true })});
+            embed.setDescription(`**Prefix;** *`)
+            embed.setFooter({ text: `${message.guild.members.me.displayName} | Toplam Komut: ${client.commands.size}`, iconURL: client.user.displayAvatarURL({ dynamic: true })});
 
             categories.forEach(kategori => {
                 const dir = client.commands.filter(c => c.config.kategori === kategori)
