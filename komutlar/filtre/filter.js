@@ -25,7 +25,7 @@ module.exports = {
         } else if (args[0]) msg.edit(`Filtre bulunamadı! <a:basarl:1008732951288234084>`)
 
         const embed = new EmbedBuilder()
-            .setAuthor({ name: `Şuanki Filtre <a:basarl:1008732951288234084>`, iconURL: `https://cdn.discordapp.com/emojis/741605543046807626.gif`})
+            .setAuthor({ name: `Şuanki Filtre`, iconURL: `https://cdn.discordapp.com/emojis/1008732951288234084.gif?size=80&quality=lossless`})
             .setDescription(`\🎲 **Filtre:** \`${queue.filters.names.join(", ") || "Normal"}\``)
             .setFooter({ text: `🔩 **Örnek:** ${client.prefix}filtre 3d`})
             .setTimestamp()

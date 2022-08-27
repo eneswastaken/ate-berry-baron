@@ -19,7 +19,7 @@ module.exports = {
         queue.filters.add("surround")
 
         const embed = new EmbedBuilder()
-            .setAuthor({ name: 'Turned on: Surround <a:basarl:1008732951288234084>', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
+            .setAuthor({ name: 'Turned on: Surround', iconURL: 'https://cdn.discordapp.com/emojis/1008732951288234084.gif?size=80&quality=lossless'})
             .setColor('#000001');
 
         await delay(5000);

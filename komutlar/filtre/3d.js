@@ -19,7 +19,7 @@ module.exports = {
         queue.filters.add("3d");
 
         const embed = new EmbedBuilder()
-            .setAuthor({ text: '3D Aktifleştirildi <a:basarl:1008732951288234084>', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
+            .setAuthor({ text: '3D Aktifleştirildi', iconURL: 'https://cdn.discordapp.com/emojis/1008732951288234084.gif?size=80&quality=lossless'})
             .setColor('#000001');
 
         await delay(5000);

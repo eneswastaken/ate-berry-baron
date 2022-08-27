@@ -20,7 +20,7 @@ module.exports = {
         queue.setVolume(50)
 
         const embed = new EmbedBuilder()
-            .setAuthor({ name: 'Filtreler Resetlendi <a:basarl:1008732951288234084>', iconURL: 'https://cdn.discordapp.com/emojis/758423098885275748.gif'})
+            .setAuthor({ name: 'Filtreler Resetlendi', iconURL: 'https://cdn.discordapp.com/emojis/1008732951288234084.gif?size=80&quality=lossless'})
             .setColor('#000001');
 
         await delay(3000);
